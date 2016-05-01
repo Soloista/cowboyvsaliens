@@ -1,0 +1,82 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'megatronregular';
+    src: url('megatron-webfont.eot');
+    src: url('megatron-webfont.eot?#iefix') format('embedded-opentype'),
+         url('megatron-webfont.woff2') format('woff2'),
+         url('megatron-webfont.woff') format('woff'),
+         url('megatron-webfont.ttf') format('truetype'),
+         url('megatron-webfont.svg#megatronregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+label {
+    font-family: 'megatronregular';
+}
+
+body {
+    background: rgb(93, 93, 93);
+}
+
+header {
+    background: rgb(57, 57, 57);
+    padding: 3px 0 3px 0;
+    margin-bottom: 10px;
+}
+
+h1#title {
+    color: rgb(213, 213, 213);
+    padding: 10px;
+}
+
+div#gamePlayer canvas{
+    margin: 0 auto;
+    border: 3px rgb(0, 62, 66) solid;
+}
+
+/*hud*/
+div.hud {
+    background: rgb(75, 75, 75);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 800px;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 3px;
+}
+div.hud div.hud-items {
+    order: 1;
+}
+
+dialog {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 31, 31);
+    border-radius: 10px;
+    border: 0;
+    width: 500px;
+    text-align: center;
+}
+
+.unPauseButton,
+.restartButton_game_over,
+.restartButton_pause,
+.startGameButton {
+    cursor: pointer;
+}

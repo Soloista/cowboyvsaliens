@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cowboy VS Aliens</title>
+        <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title" charset="utf-8">
+        <script src="assets/js/lib/phaser.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="title">
+                Cowboy VERSUS Aliens
+            </h1>
+        </header>
+        <div class="hud">
+            <div class="hud-items">
+                <label for="" id="lives">Lives: <span id="remaingLives"></span></label>
+            </div>
+            <div class="hud-items">
+                <label for="" id="score">Score: <span id="currentScore">1,000</span></label>
+            </div>
+            <div class="hud-items">
+                <label for="" id="highscore">High Score: <span id="currentHighScore">0</span></label>
+            </div>
+        </div>
+        <div id="gamePlayer"></div>
+        <div class="hud">
+            <div class="hud-items">
+                <label for="">Press 'P' To Pause The Game</label>
+            </div>
+        </div>
+        <dialog id="gameOverModal">
+            <h2>Game Over</h2>
+            <h3 class="restartButton_game_over">Click Here To Start Over Again</h3>
+        </dialog>
+        <dialog id="pauseModal">
+            <h2>Game Paused</h2>
+            <h3 class='unPauseButton'>Click Here To Unpause The Game</h3>
+            <h3 class="restartButton_pause">Click Here To Restart The Game</h3>
+        </dialog>
+        <dialog id="gameStart">
+            <h3 class="startGameButton">Click Here to Start The Game</h3>
+        </dialog>
+        <script src="assets/js/hud.js" charset="utf-8"></script>
+        <script src="assets/js/component.js" charset="utf-8"></script>
+        <script src="assets/js/game.js" charset="utf-8"></script>
+    </body>
+</html>
