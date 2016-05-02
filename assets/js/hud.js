@@ -1,10 +1,14 @@
 var playerStatus = {
     lives: 3,
     score: 0,
-    bulletType: 'normal', // normal, double and laser
     gameStarted: false,
-    hit: function () {
-        this.lives = this.lives - 1;
+    hit: function (dmgValue) {
+        var totalLives = this.lives - dmgValue;
+        if (totalLives >= 0) {
+            this.lives = totalLives
+        } else {
+            this.lives = 0;
+        }
     },
     scored: function (score) {
         this.score += score;
@@ -34,7 +38,7 @@ var Lives = (function (parent) {
     };
     var lifeDamage = function () {
         target.innerHTML = playerStatus.lives;
-        if (playerStatus.lives == 0) {
+        if (playerStatus.lives == 0 || playerStatus.lives <= 0) {
             gameOverDialog.showModal();
         }
     };
